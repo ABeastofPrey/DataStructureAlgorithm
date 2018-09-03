@@ -42,6 +42,16 @@ def quick_sort(list):
         return list
     return inner_sort(list, 0, len(list)-1)
 
+def quicksort(lst):
+    "Quicksort over a list-like sequence"
+    if len(lst) == 0:
+        return lst
+    pivot = lst[0]
+    pivots = [x for x in lst if x == pivot]
+    small = quicksort([x for x in lst if x < pivot])
+    large = quicksort([x for x in lst if x > pivot])
+    return small + pivots + lar
+
 if __name__ == '__main__':
     import random
     
